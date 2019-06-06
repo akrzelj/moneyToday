@@ -1,0 +1,11 @@
+.main {
+  color: red;
+  background-color: gray;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 30px;
+}
+
+body {
+  margin: 0px;
+}

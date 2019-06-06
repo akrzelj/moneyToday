@@ -1,0 +1,51 @@
+.imgBig {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+}
+
+.imgSmall {
+  width: 120px;
+  height: 150px;
+  background-color: black;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  width: 1000px;
+
+  border-left: 3px solid #d1d1d1;
+  border-right: 3px solid #d1d1d1;
+}
+
+#aboutMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 2;
+  border-right: 3px solid #ededed;
+}
+
+#aboutMainTitle {
+  margin: 10px;
+  padding: 5px;
+  font-size: 40px;
+  color: black;
+}
+
+#aboutSecond {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#aboutSecondTitle {
+  margin: 10px;
+  padding: 5px;
+  font-size: 30px;
+  color: black;
+}
