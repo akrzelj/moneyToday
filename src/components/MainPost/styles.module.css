@@ -1,0 +1,118 @@
+.mainStory {
+  background-color: #ededed;
+  display: table-cell;
+  overflow: hidden;
+
+  word-break: normal;
+  text-overflow: hidden;
+  overflow: hidden;
+
+  padding: 10px;
+
+  height: 230px;
+}
+
+.title {
+  margin: 5px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.img {
+  float: left;
+  width: 130px;
+  height: 130px;
+  border: 3px solid black;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.mainText {
+  word-wrap: break-word;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .post {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0px;
+    height: 230px;
+  }
+
+  .mainStory {
+    background-color: #ededed;
+    display: table-cell;
+    overflow: hidden;
+
+    word-break: normal;
+    text-overflow: hidden;
+    overflow: hidden;
+
+    padding: 10px;
+  }
+
+  .title {
+    margin: 5px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .img {
+    float: left;
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mainText {
+    word-wrap: break-word;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .post {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0px;
+  }
+
+  .mainStory {
+    background-color: #ededed;
+    display: table-cell;
+    overflow: hidden;
+
+    word-break: normal;
+    text-overflow: hidden;
+    overflow: hidden;
+
+    padding: 10px;
+  }
+
+  .title {
+    margin: 5px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .img {
+    float: left;
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mainText {
+    word-wrap: break-word;
+    padding: 10px;
+  }
+}

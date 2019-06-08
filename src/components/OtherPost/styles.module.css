@@ -1,0 +1,27 @@
+.main {
+    height: 80px;
+    background-color: #ededed;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 80px auto;
+}
+
+#image {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border: 2px solid black;
+}
+
+#desc {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    overflow: hidden;
+    padding-left: 10px;
+    word-break: normal;
+    text-overflow: hidden;
+    overflow: hidden;
+}
+
