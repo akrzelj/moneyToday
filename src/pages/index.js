@@ -3,6 +3,7 @@ import Layout from "../components/Layout/layout"
 import MainPost from "../components/MainPost/index"
 import SecondPost from "../components/SecondPost/index"
 import OtherPost from "../components/OtherPost/index"
+import PostContainer from "../components/PostContainer/index"
 
 export default ({ data }) => {
   if (data.allMarkdownRemark === null) return <div>NO DATA</div>
@@ -48,7 +49,11 @@ export default ({ data }) => {
     }
   })
 
-  return <Layout> {noviPostovi} </Layout>
+  return (
+    <Layout>
+      <PostContainer> {noviPostovi} </PostContainer>
+    </Layout>
+  )
 }
 
 export const query = graphql`
