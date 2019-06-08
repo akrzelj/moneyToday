@@ -1,10 +1,13 @@
-import React from "react";
-import { graphql } from "gatsby";
-import styles from "./styles.module.css";
+import React from "react"
+import { graphql } from "gatsby"
+import styles from "./styles.module.css"
+import Layout from "../components/Layout/index"
+import { SiteContainer } from "../components"
 
 export default ({ data }) => {
-  const { markdownRemark: post } = data;
-  return (
+  const { markdownRemark: post } = data
+
+  const stranica = (
     <>
       <h1>{post.frontmatter.title}</h1>
       <section
@@ -12,8 +15,24 @@ export default ({ data }) => {
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
     </>
-  );
-};
+  )
+
+  return (
+    <Layout>
+      <SiteContainer>{stranica}</SiteContainer>
+    </Layout>
+  )
+
+  // return (
+  //   <>
+  //     <h1>{post.frontmatter.title}</h1>
+  //     <section
+  //       className={styles.Post}
+  //       dangerouslySetInnerHTML={{ __html: post.html }}
+  //     />
+  //   </>
+  // )
+}
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
@@ -26,4 +45,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

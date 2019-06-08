@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/Layout/layout"
+import Layout from "../components/Layout/index"
 import MainPost from "../components/MainPost/index"
 import SecondPost from "../components/SecondPost/index"
 import OtherPost from "../components/OtherPost/index"

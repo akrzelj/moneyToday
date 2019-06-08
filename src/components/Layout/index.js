@@ -6,7 +6,7 @@ import Header from "./../Header"
 export default ({ children }) => {
   return (
     <div className={style.main}>
-      <div>
+      <div className={style.headAndChild}>
         <Header />
 
         {children}
