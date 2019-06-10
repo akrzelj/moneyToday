@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import style from "./styles.module.css"
 
 class Contact extends React.Component {
