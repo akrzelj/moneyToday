@@ -1,15 +1,53 @@
-import React from "react";
-import style from "./styles.module.css";
+import React, { Component } from "react"
+import style from "./styles.module.css"
 
-export default () => (
-  <div className={style.contact}>
-    <div id={style.contactTitle}>
-      <p>Contact us</p>
-    </div>
-    <input id={style.contactEmail} type="text" placeholder="Your e-mail" />
-    <div id={style.contactMsg}>
-      <p>Your message</p>
-    </div>
-    <div id={style.contactBtn}>Send Message</div>
-  </div>
-);
+class Contact extends React.Component {
+  constructor() {
+    super()
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleSubmit(event) {}
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <div className={style.contact}>
+          <div className={style.contactTitle}>Contact us...</div>
+
+          <div className={style.contactName}>
+            <input
+              id="name"
+              name="name"
+              placeholder="Enter your name here..."
+              type="text"
+            />
+          </div>
+
+          <div className={style.contactEmail}>
+            <input
+              id="email"
+              name="email"
+              placeholder="Enter your email here..."
+              type="email"
+            />
+          </div>
+          <div className={style.constactMsg}>
+            <input
+              id="msg"
+              name="msg"
+              className={style.msg}
+              placeholder="Enter you message..."
+              type="text"
+            />
+          </div>
+          <div className={style.contactBtn}>
+            <button>Click to send your msg</button>
+          </div>
+        </div>
+      </form>
+    )
+  }
+}
+
+export default Contact

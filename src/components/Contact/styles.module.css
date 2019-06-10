@@ -3,7 +3,40 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
-  margin-bottom: auto;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
   height: 400px;
-  width: 700px;
+  display: grid;
+  grid-template-rows: 30px 30px 30px auto 30px;
+  padding: 10px;
+}
+
+.contactTitle {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.contactName {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.contactEmail {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.contactMsg {
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.msg {
+  width: 95%;
+  height: 90%;
+}
+
+.contactBtn {
+  grid-row-start: 5;
+  grid-row-end: 6;
 }
