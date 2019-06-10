@@ -33,12 +33,10 @@ class Contact extends React.Component {
             />
           </div>
           <div className={style.constactMsg}>
-            <input
-              id="msg"
-              name="msg"
+            <textarea
+              name="comment"
               className={style.msg}
-              placeholder="Enter you message..."
-              type="text"
+              placeholder="Enter your msg here..."
             />
           </div>
           <div className={style.contactBtn}>
