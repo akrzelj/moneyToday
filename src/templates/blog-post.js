@@ -22,16 +22,6 @@ export default ({ data }) => {
       <SiteContainer>{stranica}</SiteContainer>
     </Layout>
   )
-
-  // return (
-  //   <>
-  //     <h1>{post.frontmatter.title}</h1>
-  //     <section
-  //       className={styles.Post}
-  //       dangerouslySetInnerHTML={{ __html: post.html }}
-  //     />
-  //   </>
-  // )
 }
 
 export const query = graphql`
