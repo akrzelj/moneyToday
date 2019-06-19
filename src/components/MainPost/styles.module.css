@@ -1,6 +1,5 @@
 .mainStory {
   background-color: #ededed;
-  display: table-cell;
   overflow: hidden;
 
   word-break: normal;
@@ -44,7 +43,6 @@
 
   .mainStory {
     background-color: #ededed;
-    display: table-cell;
     overflow: hidden;
 
     word-break: normal;
@@ -86,7 +84,6 @@
 
   .mainStory {
     background-color: #ededed;
-    display: table-cell;
     overflow: hidden;
 
     word-break: normal;

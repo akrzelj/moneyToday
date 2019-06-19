@@ -6,9 +6,7 @@ import { Link } from "gatsby"
 export default ({ title, fluid, to, children }) => (
   <Link to={to}>
     <div className={style.main}>
-      <div id={style.image}>
-        <Img fluid={fluid} />
-      </div>
+      <Img fluid={fluid} />
       <div id={style.desc}>
         <span>{title}</span>
         <hr />

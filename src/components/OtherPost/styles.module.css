@@ -6,7 +6,7 @@
   grid-template-columns: 80px auto;
 }
 
-#image {
+img {
   grid-column-start: 1;
   grid-column-end: 2;
   width: 80px;
