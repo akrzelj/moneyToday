@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styles from "./styles.module.css"
-import Layout from "../components/Layout/index"
+import Layout from "../components/Layout"
 import { SiteContainer } from "../components"
 
 export default ({ data }) => {

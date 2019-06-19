@@ -10,6 +10,7 @@
   display: grid;
   grid-template-rows: 30px 30px 30px auto 30px;
   padding: 10px;
+  background-color: #ededed;
 }
 
 .contactTitle {
