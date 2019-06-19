@@ -23,7 +23,7 @@ export default () => {
       </>
     )
   } else {
-    content.message = "You are not logged in. Please: "
+    content.message = ""
     content.display = (
       <>
         {content.message}
