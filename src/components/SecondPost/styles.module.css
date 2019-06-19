@@ -2,7 +2,7 @@
   background-color: #ededed;
   padding: 10px;
   display: grid;
-  height: 200px;
+  height: 140px;
   grid-template-columns: 140px auto;
 }
 
@@ -31,15 +31,15 @@
     padding: 10px;
     display: grid;
     grid-template-columns: 160px auto;
-    height: 200px;
+    height: 140px;
     overflow: hidden;
   }
 
   #image {
     grid-column-start: 1;
     grid-column-end: 2;
-    width: 150px;
-    height: 150px;
+    width: 12s0px;
+    height: 120px;
     background-color: black;
     border: 2px solid black;
   }
