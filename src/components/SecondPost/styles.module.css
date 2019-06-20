@@ -38,7 +38,7 @@ img {
   img {
     grid-column-start: 1;
     grid-column-end: 2;
-    width: 12s0px;
+    width: 120px;
     height: 120px;
     background-color: black;
     border: 2px solid red;

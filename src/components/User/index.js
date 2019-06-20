@@ -7,7 +7,7 @@ export default () => {
   const content = { message: "", login: true }
   console.log(isLoggedIn())
   if (isLoggedIn()) {
-    content.message = `Hello, ${getUser().name}`
+    content.message = `${getUser().name}`
     content.display = (
       <>
         {content.message}

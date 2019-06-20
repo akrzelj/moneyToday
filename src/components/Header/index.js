@@ -25,7 +25,6 @@ export default () => {
           <span className={styles.navBarElContainer}>
             <NavLink to="/">News</NavLink>
             <NavLink to="/analysis">Analysis</NavLink>
-            {/* <NavLink to="/">Shop</NavLink> */}
             <NavLink to="/about/">About</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
           </span>
