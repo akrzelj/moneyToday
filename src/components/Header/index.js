@@ -15,25 +15,27 @@ export default () => {
   }
 
   return (
-    <div className={styles.nav}>
-      <span id={styles.title}>Money Today</span>
-      <span id={styles.login}>
-        <User />
-      </span>
-      <nav className={styles.navBar}>
-        <span className={styles.navBarElContainer}>
-          <NavLink to="/">News</NavLink>
-          <NavLink to="/analysis">Analysis</NavLink>
-          {/* <NavLink to="/">Shop</NavLink> */}
-          <NavLink to="/about/">About</NavLink>
-          <NavLink to="/contact/">Contact</NavLink>
+    <div className={styles.wrapper}>
+      <div className={styles.nav}>
+        <span id={styles.title}>Money Today</span>
+        <span id={styles.login}>
+          <User />
         </span>
-        <input
-          className={styles.navBarElSearch}
-          type="text"
-          placeholder="Search..."
-        />
-      </nav>
+        <nav className={styles.navBar}>
+          <span className={styles.navBarElContainer}>
+            <NavLink to="/">News</NavLink>
+            <NavLink to="/analysis">Analysis</NavLink>
+            {/* <NavLink to="/">Shop</NavLink> */}
+            <NavLink to="/about/">About</NavLink>
+            <NavLink to="/contact/">Contact</NavLink>
+          </span>
+          <input
+            className={styles.navBarElSearch}
+            type="text"
+            placeholder="Search..."
+          />
+        </nav>
+      </div>
     </div>
   )
 }
