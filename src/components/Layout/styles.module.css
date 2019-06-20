@@ -13,3 +13,8 @@ body {
 .headAndChild {
   background-color: white;
 }
+
+.wrapper {
+  height: 50%;
+  padding: 5px;
+}

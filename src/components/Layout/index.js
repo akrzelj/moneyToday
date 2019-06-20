@@ -8,8 +8,7 @@ export default ({ children }) => {
     <div className={style.main}>
       <div className={style.headAndChild}>
         <Header />
-
-        {children}
+        <div className={style.wrapper}>{children}</div>
       </div>
       <Footer />
     </div>
