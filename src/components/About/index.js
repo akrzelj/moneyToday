@@ -16,6 +16,7 @@ export default () => (
         marketing buzz stock low hanging fruit social media partnership. Success
         sales iteration series A financing. Release A
       </div>
+      <br />
     </div>
     <div id={style.aboutSecond}>
       <div id={style.aboutSecondFirst}>
@@ -31,7 +32,7 @@ export default () => (
           crowdsource success. Pivot ip. Success sales iteration series A
           financing. Release A
         </div>
-
+        <br />
         <br />
       </div>
       <div id={style.aboutSecondFirst}>
@@ -48,7 +49,7 @@ export default () => (
           non-disclosure agreemeser expers iteration series A financing. Release
           A
         </div>
-
+        <br />
         <br />
       </div>
       <div id={style.aboutSecondFirst}>
@@ -65,7 +66,7 @@ export default () => (
           non-disclosure agreemeser expers iteration series A financing. Release
           A
         </div>
-
+        <br />
         <br />
       </div>
     </div>

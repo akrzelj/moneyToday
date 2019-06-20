@@ -55,3 +55,63 @@
 div {
   color: black;
 }
+
+@media only screen and (max-width: 500px) {
+  .imgBig {
+    width: 150px;
+    height: 120px;
+    background-color: black;
+  }
+
+  .imgSmall {
+    width: 150px;
+    height: 120px;
+    background-color: black;
+  }
+
+  .about {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    padding: 0px;
+    margin: 0px;
+
+    border-left: 0px;
+    border-right: 0px;
+  }
+
+  #aboutMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    border-right: 0px;
+  }
+
+  #aboutMainTitle {
+    margin: 10px;
+    padding: 5px;
+    font-size: 40px;
+    color: black;
+  }
+
+  #aboutSecond {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #aboutSecondTitle {
+    margin: 10px;
+    padding: 5px;
+    font-size: 30px;
+    color: black;
+  }
+
+  div {
+    color: black;
+  }
+}
