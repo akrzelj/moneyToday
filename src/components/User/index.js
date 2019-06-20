@@ -28,7 +28,7 @@ export default () => {
       <>
         {content.message}
         <Link to="/app/login">Login</Link>
-        <span>, or: </span>
+        <span>/</span>
         <Link to="/app/register">Register</Link>
       </>
     )
