@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-import { getUser, isLoggedIn } from "../services/auth"
+import { Link, graphql } from "gatsby"
+import { isLoggedIn } from "../services/auth"
 
 import Layout from "../components/Layout"
 import MainPost from "../components/MainPost/index"
