@@ -52,6 +52,13 @@ export default ({ data }) => {
     }
   })
 
+  const logInMsgStyle = {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
+    fontSize: "30px",
+  }
+
   return (
     <Layout>
       {isLoggedIn() ? (
@@ -59,8 +66,14 @@ export default ({ data }) => {
         <PostContainer> {noviPostovi} </PostContainer>
       ) : (
         <>
-          You should <Link to="/app/login">log in</Link> or{" "}
-          <Link to="/app/register">register</Link>to see restricted content
+          <br />
+          <br />
+          <br />
+          <div style={logInMsgStyle}>
+            <Link to="/app/login">Log in </Link>&nbsp; or
+            <Link to="/app/register">&nbsp; register &nbsp; </Link>to see
+            restricted content
+          </div>
         </>
       )}
     </Layout>
