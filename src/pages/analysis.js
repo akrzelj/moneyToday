@@ -22,6 +22,7 @@ export default ({ data }) => {
     if (posts.indexOf(post) === 0) {
       noviPostovi.push(
         <MainPost
+          key={posts.indexOf(post)}
           title={title}
           fluid={thumbnail}
           to={type + "/" + post.node.frontmatter.slug}
@@ -32,6 +33,7 @@ export default ({ data }) => {
     } else if (posts.indexOf(post) === 1 || posts.indexOf(post) === 2) {
       noviPostovi.push(
         <SecondPost
+          key={posts.indexOf(post)}
           title={title}
           fluid={thumbnail}
           to={type + "/" + post.node.frontmatter.slug}
@@ -42,6 +44,7 @@ export default ({ data }) => {
     } else {
       noviPostovi.push(
         <OtherPost
+          key={posts.indexOf(post)}
           title={title}
           fluid={thumbnail}
           to={type + "/" + post.node.frontmatter.slug}
