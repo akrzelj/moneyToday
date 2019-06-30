@@ -1,12 +1,11 @@
 import React from "react"
 import style from "./styles.module.css"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 
 export default (
   { title, fluid, to, children } // TODO: refactor component
 ) => (
-  <Link to={to}>
+  <a href={to}>
     <div className={style.main}>
       <Img fluid={fluid} />
 
@@ -16,5 +15,5 @@ export default (
         <span id={style.textDesc}>{children}</span>
       </div>
     </div>
-  </Link>
+  </a>
 )

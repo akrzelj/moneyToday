@@ -1,11 +1,10 @@
 import React from "react"
 import style from "./styles.module.css"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 
 export default ({ title, fluid, to, children }) => (
   <div className={style.post}>
-    <Link to={to}>
+    <a href={to}>
       <div className={style.mainStory}>
         {/* <div className={style.img}> */}
         <Img fluid={fluid} />
@@ -16,6 +15,6 @@ export default ({ title, fluid, to, children }) => (
           <p>{children}</p>
         </div>
       </div>
-    </Link>
+    </a>
   </div>
 )
