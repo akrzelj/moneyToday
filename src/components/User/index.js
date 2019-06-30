@@ -5,7 +5,6 @@ import { getUser, isLoggedIn, logout } from "../../services/auth"
 
 export default () => {
   const content = { message: "", login: true }
-  console.log(isLoggedIn())
   if (isLoggedIn()) {
     content.message = `${getUser().name}`
     content.display = (
