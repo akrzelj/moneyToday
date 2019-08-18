@@ -8,7 +8,7 @@ export default () => {
   if (isLoggedIn()) {
     content.message = `${getUser().name}`
     content.display = (
-      <>
+      <Link to="app/profile">
         {content.message}
         <a
           href="/"
@@ -19,7 +19,7 @@ export default () => {
         >
           (Logout)
         </a>
-      </>
+      </Link>
     )
   } else {
     content.message = ""

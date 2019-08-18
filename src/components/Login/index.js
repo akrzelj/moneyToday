@@ -1,6 +1,6 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { handleLogin, isLoggedIn } from "../services/auth"
+import { handleLogin, isLoggedIn } from "../../services/auth"
 
 class Login extends React.Component {
   state = {
@@ -26,6 +26,10 @@ class Login extends React.Component {
 
     return (
       <>
+        <div>
+          <div />
+          <div />
+        </div>
         <h1>Log in</h1>
         <form
           method="post"
