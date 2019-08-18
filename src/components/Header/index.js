@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import NavLink from "./NavLink"
 import styles from "./styles.module.css"
@@ -8,7 +9,9 @@ export default () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.nav}>
-        <span id={styles.title}>Money Today</span>
+        <Link to="/" id={styles.title}>
+          Money Today
+        </Link>
         <span id={styles.login}>
           <User />
         </span>
