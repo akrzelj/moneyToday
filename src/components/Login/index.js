@@ -1,5 +1,6 @@
 import React from "react"
 import { navigate } from "gatsby"
+import style from "./styles.module.css"
 import { handleLogin, isLoggedIn } from "../../services/auth"
 
 class Login extends React.Component {
@@ -16,7 +17,7 @@ class Login extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    handleLogin(this.state)
+    return handleLogin(this.state)
   }
 
   render() {
@@ -26,31 +27,47 @@ class Login extends React.Component {
 
     return (
       <>
-        <div>
-          <div />
-          <div />
-        </div>
-        <h1>Log in</h1>
         <form
           method="post"
           onSubmit={event => {
-            this.handleSubmit(event)
-            navigate(`/analysis`)
+            let loginSuccess = this.handleSubmit(event)
+            if (loginSuccess === false) {
+              alert("Credentials not valid!!!")
+            } else {
+              navigate(`/analysis`)
+            }
           }}
         >
-          <label>
-            Username
-            <input type="text" name="username" onChange={this.handleUpdate} />
-          </label>
-          <label>
-            Password
-            <input
-              type="password"
-              name="password"
-              onChange={this.handleUpdate}
-            />
-          </label>
-          <input type="submit" value="Log In" />
+          <div className={style.form}>
+            <div className={style.logoo}>
+              <div className={style.title}>Login</div>
+
+              <div className={style.username}>
+                <input
+                  className={style.loginInput}
+                  id="username"
+                  name="username"
+                  placeholder="Enter your username here..."
+                  type="text"
+                  onChange={this.handleUpdate}
+                />
+              </div>
+
+              <div className={style.password}>
+                <input
+                  className={style.loginInput}
+                  id="password"
+                  name="password"
+                  placeholder="Enter your password here..."
+                  type="text"
+                  onChange={this.handleUpdate}
+                />
+              </div>
+              <div className={style.buttonContainer}>
+                <input className={style.button} type="submit" value="Login" />
+              </div>
+            </div>
+          </div>
         </form>
       </>
     )

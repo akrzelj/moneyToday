@@ -1,0 +1,73 @@
+.container {
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 250px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr 2fr 2fr;
+  grid-row-gap: 13%;
+  padding: 10px;
+  background-color: #ededed;
+  grid-column-gap: 5%;
+}
+
+.title {
+  background-color: white;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.username {
+  background-color: white;
+  padding: 5px;
+  font-size: 25px;
+}
+
+.email {
+  background-color: white;
+  padding: 5px;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    height: 100%;
+    width: 80%;
+    border: 2px solid black;
+    height: 250px;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: 15% 15% 15% 15%;
+    grid-template-columns: 100%;
+    grid-row-gap: 13%;
+
+    padding: 10px;
+    background-color: #ededed;
+  }
+
+  .title {
+    font-size: 30px;
+    background-color: white;
+  }
+
+  .info {
+  }
+
+  .username {
+    background-color: white;
+    padding: 2%;
+    font-size: 20px;
+  }
+
+  .email {
+    padding: 2%;
+    background-color: white;
+    font-size: 20px;
+  }
+}

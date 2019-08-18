@@ -1,7 +1,7 @@
 import React from "react"
 import { Router } from "@reach/router"
 import Layout from "../components/Layout"
-import Profile from "../components/profile"
+import Profile from "../components/Profile"
 import Login from "../components/Login"
 import PrivateRoute from "../components/privateRoute"
 import Register from "./../components/Register"
