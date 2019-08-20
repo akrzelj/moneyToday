@@ -16,7 +16,7 @@
   grid-column-gap: 20px;
   padding: 20px;
   margin: auto;
-  width: 1000px;
+  width: 960px;
 
   border-left: 3px solid #d1d1d1;
   border-right: 3px solid #d1d1d1;
@@ -56,7 +56,66 @@ div {
   color: black;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
+  .imgBig {
+    width: 150px;
+    height: 120px;
+    background-color: black;
+  }
+
+  .imgSmall {
+    width: 150px;
+    height: 120px;
+    background-color: black;
+  }
+
+  .about {
+    margin: auto;
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    padding: 0px;
+    border-left: 3px solid #d1d1d1;
+    border-right: 3px solid #d1d1d1;
+  }
+
+  #aboutMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    border-right: 0px;
+  }
+
+  #aboutMainTitle {
+    margin: 10px;
+    padding: 5px;
+    font-size: 40px;
+    color: black;
+  }
+
+  #aboutSecond {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #aboutSecondTitle {
+    margin: 10px;
+    padding: 5px;
+    font-size: 30px;
+    color: black;
+  }
+
+  div {
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .imgBig {
     width: 150px;
     height: 120px;
