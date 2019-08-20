@@ -8,8 +8,6 @@ type: "news"
 
 <!-- markdownlint-disable MD033 -->
 
-# [Lorem Ipsum](https://www.lipsum.com/)
-
 <figure class="figure">
     <img src="./images/austin-neill-222827-unsplash.jpg" alt="Title"/>
     <figcaption class="figure__caption">Title</figcaption>
@@ -22,7 +20,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 ## Where does it come from?
 
 <figure class="figure">
-    <img src="./images/clem-onojeghuo-203219-unsplash.jpg" alt="Title"/>
+    <img src="./images/slika.jpg" alt="Title"/>
     <figcaption class="figure__caption">Title</figcaption>
 </figure>
 

@@ -10,10 +10,8 @@ indexImage: "./images/slika.jpg"
 
 <!-- markdownlint-disable MD033 -->
 
-# [Lorem Ipsum](https://www.lipsum.com/)
-
 <figure class="figure">
-    <img src="./images/ho-hyou-735008-unsplash.jpg" alt="Title"/>
+    <img src="./images/slika.jpg" alt="Title"/>
     <figcaption class="figure__caption">Title</figcaption>
 </figure>
 

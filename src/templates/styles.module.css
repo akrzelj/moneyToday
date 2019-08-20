@@ -5,3 +5,8 @@
 .Post > p {
   padding: 0;
 }
+
+.container {
+  padding: 30px;
+  padding-top: 0px;
+}

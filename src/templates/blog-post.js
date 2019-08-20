@@ -19,7 +19,9 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SiteContainer>{stranica}</SiteContainer>
+      <SiteContainer>
+        <div className={styles.container}>{stranica}</div>
+      </SiteContainer>
     </Layout>
   )
 }
