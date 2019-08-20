@@ -1,7 +1,6 @@
 import React from "react"
 import style from "./styles.module.css"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 
 export default ({ title, fluid, to, children }) => (
   <div className={style.post}>
