@@ -7,6 +7,7 @@ import MainPost from "../components/MainPost/index"
 import SecondPost from "../components/SecondPost/index"
 import OtherPost from "../components/OtherPost/index"
 import PostContainer from "../components/PostContainer/index"
+import { LogRegMsg } from "../components"
 
 export default ({ data }) => {
   if (data.allMarkdownRemark === null) return <div>NO DATA</div>
@@ -55,29 +56,12 @@ export default ({ data }) => {
     }
   })
 
-  const logInMsgStyle = {
-    display: "flex",
-    justifyContent: "center",
-    width: "100%",
-    fontSize: "30px",
-  }
-
   return (
     <Layout>
       {isLoggedIn() ? (
-        // ovdje ubaciti ckomponentu postova
         <PostContainer> {noviPostovi} </PostContainer>
       ) : (
-        <>
-          <br />
-          <br />
-          <br />
-          <div style={logInMsgStyle}>
-            <Link to="/app/login">Log in </Link>&nbsp; or
-            <Link to="/app/register">&nbsp; register &nbsp; </Link>to see
-            restricted content
-          </div>
-        </>
+        <LogRegMsg />
       )}
     </Layout>
   )
