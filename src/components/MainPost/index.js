@@ -7,7 +7,7 @@ export default ({ title, fluid, to, children }) => (
     <a href={to}>
       <div className={style.mainStory}>
         {/* <div className={style.img}> */}
-        <Img fluid={fluid} />
+        <Img className={style.img} fluid={fluid} />
         {/* </div> */}
         <div className={style.mainText}>
           <p className={style.title}>{title}</p>
