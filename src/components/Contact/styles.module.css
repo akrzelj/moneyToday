@@ -3,13 +3,14 @@
   margin-top: 50px;
   margin-bottom: 100px;
 
-  height: 400px;
+  height: 500px;
   width: 960px;
 
   border-left: 3px solid #d1d1d1;
   border-right: 3px solid #d1d1d1;
   display: grid;
-  grid-template-rows: 30px 30px 30px auto 30px;
+  grid-template-rows: 30px 40px 40px auto 30px;
+  grid-row-gap: 20px;
   padding: 1%;
   background-color: #ededed;
 }
@@ -24,9 +25,20 @@
   grid-row-end: 3;
 }
 
+.contactName input {
+  width: 300px;
+  height: 100%;
+}
+
 .contactEmail {
   grid-row-start: 3;
   grid-row-end: 4;
+  height: 100%;
+}
+
+.contactEmail input {
+  width: 300px;
+  height: 100%;
 }
 
 .contactMsg {
@@ -101,6 +113,16 @@
     height: 100%;
     width: 100%;
     background-color: #ededed;
+  }
+
+  .contactName input {
+    width: 95%;
+    height: 100%;
+  }
+
+  .contactEmail input {
+    width: 95%;
+    height: 100%;
   }
 
   .contact {
