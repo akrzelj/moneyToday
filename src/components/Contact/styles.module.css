@@ -2,14 +2,14 @@
   border: 2px solid black;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
   margin-left: 100px;
   margin-right: 100px;
   height: 400px;
   display: grid;
   grid-template-rows: 30px 30px 30px auto 30px;
-  padding: 10px;
+  padding: 1%;
   background-color: #ededed;
 }
 
@@ -33,27 +33,33 @@
   grid-row-end: 5;
 }
 .msg {
-  width: 95%;
+  width: 99%;
   height: 90%;
+  resize: none;
 }
 
 .contactBtn {
   grid-row-start: 5;
   grid-row-end: 6;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media only screen and (max-width: 500px) {
   form {
     height: 100%;
     width: 100%;
+    background-color: #ededed;
   }
+
   .contact {
-    border: 2px solid black;
-    height: 100%;
-    margin: 20px;
+    border: 0px solid black;
+    height: 400px;
+    width: 94%;
+    margin: 0px;
+    padding: 3%;
     display: grid;
     grid-template-rows: 30px 30px 30px auto 30px;
-    padding: 10px;
     background-color: #ededed;
   }
 
@@ -79,10 +85,13 @@
   .msg {
     width: 95%;
     height: 90%;
+    resize: none;
   }
 
   .contactBtn {
     grid-row-start: 5;
     grid-row-end: 6;
+    display: flex;
+    justify-content: flex-end;
   }
 }
