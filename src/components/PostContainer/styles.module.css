@@ -2,8 +2,6 @@
   width: 100%;
   margin: auto;
   display: grid;
-  border-left: 3px solid #d1d1d1;
-  border-right: 3px solid #d1d1d1;
   grid-template-rows: 250px auto;
   grid-row-gap: 10px;
 }
