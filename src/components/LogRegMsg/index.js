@@ -4,9 +4,6 @@ import { Link } from "gatsby"
 
 export default ({ children }) => (
   <>
-    <br />
-    <br />
-    <br />
     <div className={style.container}>
       <Link to="/app/login">Log in </Link>&nbsp; or
       <Link to="/app/register">&nbsp; register &nbsp; </Link>

@@ -1,12 +1,13 @@
 .contact {
-  border: 2px solid black;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   margin-top: 50px;
   margin-bottom: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
+
   height: 400px;
+  width: 960px;
+
+  border-left: 3px solid #d1d1d1;
+  border-right: 3px solid #d1d1d1;
   display: grid;
   grid-template-rows: 30px 30px 30px auto 30px;
   padding: 1%;
@@ -45,7 +46,57 @@
   justify-content: flex-end;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
+  .contact {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    height: 400px;
+    width: 550px;
+
+    border-left: 3px solid #d1d1d1;
+    border-right: 3px solid #d1d1d1;
+    display: grid;
+    grid-template-rows: 30px 30px 30px auto 30px;
+    padding: 1%;
+    background-color: #ededed;
+  }
+
+  .contactTitle {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .contactName {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .contactEmail {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .contactMsg {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .msg {
+    width: 99%;
+    height: 90%;
+    resize: none;
+  }
+
+  .contactBtn {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   form {
     height: 100%;
     width: 100%;
