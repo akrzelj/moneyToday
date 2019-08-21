@@ -18,7 +18,7 @@ export default () => {
         <nav className={styles.navBar}>
           <span className={styles.navBarElContainer}>
             <NavLink to="/">News</NavLink>
-            <NavLink to="/analysis">Analysis</NavLink>
+            <NavLink to="/analysis/">Analysis</NavLink>
             <NavLink to="/about/">About</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
           </span>
