@@ -3,6 +3,8 @@ import React from "react"
 import { Link, navigate } from "gatsby"
 import { getUser, isLoggedIn, logout } from "../../services/auth"
 
+import styles from "./styles.module.css"
+
 export default () => {
   const content = { message: "", login: true }
   if (isLoggedIn()) {
@@ -27,8 +29,10 @@ export default () => {
       <>
         {content.message}
         <Link to="/app/login">Login</Link>
-        <span>/</span>
-        <Link to="/app/register">Register</Link>
+        <span className={styles.hideOnMobile}>{" / "}</span>
+        <Link className={styles.hideOnMobile} to="/app/register">
+          Register
+        </Link>
       </>
     )
   }
