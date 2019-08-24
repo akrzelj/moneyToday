@@ -1,18 +1,17 @@
+.form {
+  height: 100%;
+  width: 100%;
+}
 .regoo {
-  border: 2px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
-  height: 60px;
   display: grid;
-  grid-template-columns: 35% 35% 20%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 30px 50px 20px 50px 20px 50px 20px;
+  grid-row-gap: 10px;
+
   padding: 10px;
   background-color: #ededed;
-  grid-column-gap: 5%;
+
+  border-left: 3px solid #d1d1d1;
+  border-right: 3px solid #d1d1d1;
 }
 
 .registerInput {
@@ -21,24 +20,10 @@
 }
 
 .title {
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.username {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  width: 100%;
-}
-
-.password {
-  grid-row-start: 2;
-  grid-row-end: 3;
+  font-size: 30px;
 }
 
 .buttonContainer {
-  grid-row-start: 2;
-  grid-row-end: 3;
   height: 100%;
   padding: 1px;
 }
@@ -54,54 +39,60 @@
   font-size: 16px;
 }
 
-@media only screen and (max-width: 500px) {
-  .form {
-    height: 100%;
-    width: 100%;
-  }
-  .regoo {
-    border: 2px solid black;
-    height: 250px;
-    margin: 20px;
-    display: grid;
-    grid-template-rows: 15% 15% 15% 15%;
-    grid-template-columns: 100%;
-    grid-row-gap: 13%;
+.feedback {
+  color: red;
+}
 
-    padding: 10px;
+#usernameFeedback {
+  color: red;
+}
+
+@media only screen and (min-width: 1000px) {
+  .regoo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: 30px 50px 20px 50px 20px 50px 20px;
+    grid-row-gap: 10px;
     background-color: #ededed;
+    width: 1000px;
+    border-left: 3px solid #d1d1d1;
+    border-right: 3px solid #d1d1d1;
   }
 
   .registerInput {
-    padding: 1%;
-    width: 96%;
+    width: 99%;
     height: 100%;
-  }
-
-  .title {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    font-size: 30px;
   }
 
   .username {
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  .password {
-    grid-row-start: 3;
-    grid-row-end: 4;
+    width: 100%;
   }
 
   .buttonContainer {
-    grid-row-start: 4;
-    grid-row-end: 5;
     height: 100%;
-    padding: 1px;
   }
 
   .button {
+    height: 100%;
+    width: 100%;
+    background-color: #4caf50; /* Green */
+    border: none;
     color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
   }
+
+  .feedback {
+    color: red;
+  }
+}
+
+input:disabled {
+  background-color: gray;
 }

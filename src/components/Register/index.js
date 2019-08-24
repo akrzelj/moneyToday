@@ -5,14 +5,84 @@ import style from "./styles.module.css"
 
 class Register extends React.Component {
   state = {
-    username: ``,
-    password: ``,
+    username: "",
+    password: "",
+  }
+
+  isContentAlphanumeric(content) {
+    return !/[^a-zA-Z0-9]/.test(content)
   }
 
   handleUpdate = event => {
     this.setState({
       [event.target.name]: event.target.value,
     })
+
+    if (this.checkUsername(event) && this.checkPassword(event)) {
+      document.getElementById("submitButton").disabled = false
+    } else {
+      document.getElementById("submitButton").disabled = true
+    }
+  }
+
+  checkUsername(event) {
+    let currUsername =
+      event.target.name === "username"
+        ? event.target.value
+        : this.state.username
+    console.log(currUsername)
+    console.log("prije")
+    console.log(currUsername.length)
+    console.log(this.isContentAlphanumeric(currUsername))
+    document.getElementById("usernameFeedback").innerHTML = ""
+    if (currUsername.length <= 5) {
+      document.getElementById("submitButton").disabled = true
+      document.getElementById("usernameFeedback").innerHTML +=
+        "Username has to be longer than 5 signs. "
+      console.log("Username has to be longer than 5 signs. ")
+    }
+    if (!this.isContentAlphanumeric(currUsername)) {
+      document.getElementById("submitButton").disabled = true
+      document.getElementById("usernameFeedback").innerHTML +=
+        "Username can only contain alphanumeric signs. "
+      console.log("Username can only contain alphanumeric signs.")
+    }
+    if (currUsername.length > 5 && this.isContentAlphanumeric(currUsername)) {
+      document.getElementById("usernameFeedback").innerHTML = ""
+      return true
+    }
+
+    return false
+  }
+
+  checkPassword(event) {
+    let currPassword =
+      event.target.name === "password"
+        ? event.target.value
+        : this.state.password
+    console.log(currPassword)
+    console.log("prije")
+    console.log(currPassword.length)
+    console.log(this.isContentAlphanumeric(currPassword))
+    document.getElementById("passwordFeedback").innerHTML = ""
+    if (currPassword.length <= 5) {
+      document.getElementById("submitButton").disabled = true
+      document.getElementById("passwordFeedback").innerHTML +=
+        "Password has to be longer than 5 signs. "
+      console.log("Password has to be longer than 5 signs. ")
+    }
+    if (!this.isContentAlphanumeric(currPassword)) {
+      document.getElementById("submitButton").disabled = true
+      document.getElementById("passwordFeedback").innerHTML +=
+        "Password can only contain alphanumeric signs. "
+      console.log("Password can only contain alphanumeric signs.")
+    }
+    if (currPassword.length > 5 && this.isContentAlphanumeric(currPassword)) {
+      document.getElementById("passwordFeedback").innerHTML = ""
+      return true
+    }
+
+    return false
   }
 
   handleSubmit = event => {
@@ -31,7 +101,7 @@ class Register extends React.Component {
           method="post"
           onSubmit={event => {
             this.handleSubmit(event)
-            navigate(`/analysis`)
+            navigate(`/`)
           }}
         >
           <div className={style.form}>
@@ -45,9 +115,10 @@ class Register extends React.Component {
                   name="username"
                   placeholder="Enter your username here..."
                   type="text"
-                  onChange={this.handleUpdate}
+                  onInputCapture={this.handleUpdate}
                 />
               </div>
+              <div id="usernameFeedback" className={style.feedback} />
 
               <div className={style.password}>
                 <input
@@ -56,16 +127,20 @@ class Register extends React.Component {
                   name="password"
                   placeholder="Enter your password here..."
                   type="text"
-                  onChange={this.handleUpdate}
+                  onInputCapture={this.handleUpdate}
                 />
               </div>
+              <div id="passwordFeedback" className={style.feedback} />
               <div className={style.buttonContainer}>
                 <input
                   className={style.button}
                   type="submit"
                   value="Register"
+                  id="submitButton"
+                  disabled
                 />
               </div>
+              <div id="messageFeedback" className={style.feedback} />
             </div>
           </div>
         </form>
