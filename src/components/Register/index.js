@@ -7,10 +7,16 @@ class Register extends React.Component {
   state = {
     username: "",
     password: "",
+    email: "",
   }
 
   isContentAlphanumeric(content) {
     return !/[^a-zA-Z0-9]/.test(content)
+  }
+
+  isContentValidEmail(content) {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(content)
   }
 
   handleUpdate = event => {
@@ -18,7 +24,11 @@ class Register extends React.Component {
       [event.target.name]: event.target.value,
     })
 
-    if (this.checkUsername(event) && this.checkPassword(event)) {
+    if (
+      this.checkUsername(event) &&
+      this.checkPassword(event) &&
+      this.checkEmail(event)
+    ) {
       document.getElementById("submitButton").disabled = false
     } else {
       document.getElementById("submitButton").disabled = true
@@ -30,19 +40,13 @@ class Register extends React.Component {
       event.target.name === "username"
         ? event.target.value
         : this.state.username
-    console.log(currUsername)
-    console.log("prije")
-    console.log(currUsername.length)
-    console.log(this.isContentAlphanumeric(currUsername))
     document.getElementById("usernameFeedback").innerHTML = ""
     if (currUsername.length <= 5) {
-      document.getElementById("submitButton").disabled = true
       document.getElementById("usernameFeedback").innerHTML +=
         "Username has to be longer than 5 signs. "
       console.log("Username has to be longer than 5 signs. ")
     }
     if (!this.isContentAlphanumeric(currUsername)) {
-      document.getElementById("submitButton").disabled = true
       document.getElementById("usernameFeedback").innerHTML +=
         "Username can only contain alphanumeric signs. "
       console.log("Username can only contain alphanumeric signs.")
@@ -60,25 +64,36 @@ class Register extends React.Component {
       event.target.name === "password"
         ? event.target.value
         : this.state.password
-    console.log(currPassword)
-    console.log("prije")
-    console.log(currPassword.length)
-    console.log(this.isContentAlphanumeric(currPassword))
     document.getElementById("passwordFeedback").innerHTML = ""
     if (currPassword.length <= 5) {
-      document.getElementById("submitButton").disabled = true
       document.getElementById("passwordFeedback").innerHTML +=
         "Password has to be longer than 5 signs. "
       console.log("Password has to be longer than 5 signs. ")
     }
     if (!this.isContentAlphanumeric(currPassword)) {
-      document.getElementById("submitButton").disabled = true
       document.getElementById("passwordFeedback").innerHTML +=
         "Password can only contain alphanumeric signs. "
       console.log("Password can only contain alphanumeric signs.")
     }
     if (currPassword.length > 5 && this.isContentAlphanumeric(currPassword)) {
       document.getElementById("passwordFeedback").innerHTML = ""
+      return true
+    }
+
+    return false
+  }
+
+  checkEmail(event) {
+    let currEmail =
+      event.target.name === "email" ? event.target.value : this.state.email
+
+    document.getElementById("emailFeedback").innerHTML = ""
+
+    if (!this.isContentValidEmail(currEmail)) {
+      document.getElementById("emailFeedback").innerHTML +=
+        "Please enter valid e-mail address."
+    } else {
+      document.getElementById("emailFeedback").innerHTML = ""
       return true
     }
 
@@ -131,6 +146,19 @@ class Register extends React.Component {
                 />
               </div>
               <div id="passwordFeedback" className={style.feedback} />
+
+              <div className={style.email}>
+                <input
+                  className={style.registerInput}
+                  id="email"
+                  name="email"
+                  placeholder="Enter your e-mail here..."
+                  type="text"
+                  onInputCapture={this.handleUpdate}
+                />
+              </div>
+              <div id="emailFeedback" className={style.feedback} />
+
               <div className={style.buttonContainer}>
                 <input
                   className={style.button}
