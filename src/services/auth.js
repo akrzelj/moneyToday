@@ -20,6 +20,21 @@ export const handleLogin = ({ username, password }) => {
   return false
 }
 
+export const loginWithoutCheckingCredentials = ({
+  username,
+  password,
+  email,
+}) => {
+  console.log(username, password, email)
+  return setUser({
+    username: username,
+    name: password,
+    email: email,
+  })
+
+  return false
+}
+
 export const isLoggedIn = () => {
   const user = getUser()
 

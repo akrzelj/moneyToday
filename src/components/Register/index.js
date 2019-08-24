@@ -1,6 +1,9 @@
 import React from "react"
-import { navigate } from "gatsby"
-import { handleLogin, isLoggedIn } from "../../services/auth"
+import { Link, navigate } from "gatsby"
+import {
+  loginWithoutCheckingCredentials,
+  isLoggedIn,
+} from "../../services/auth"
 import style from "./styles.module.css"
 
 class Register extends React.Component {
@@ -102,7 +105,7 @@ class Register extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    handleLogin(this.state)
+    return loginWithoutCheckingCredentials(this.state)
   }
 
   render() {
@@ -168,7 +171,10 @@ class Register extends React.Component {
                   disabled
                 />
               </div>
-              <div id="messageFeedback" className={style.feedback} />
+              <div className={style.redirectToLogin}>
+                Allready have an account? Then&nbsp;
+                <Link to="/app/login"> Login </Link>
+              </div>
             </div>
           </div>
         </form>

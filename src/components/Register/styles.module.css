@@ -96,3 +96,8 @@
 input:disabled {
   background-color: gray;
 }
+
+.redirectToLogin {
+  display: flex;
+  justify-content: center;
+}
