@@ -5,6 +5,16 @@ import NavLink from "./NavLink"
 import styles from "./styles.module.css"
 import User from "../User"
 
+import { setData } from "../../services/searchService"
+import { navigate } from "@reach/router"
+
+function handleSearch() {
+  const searchData = document.getElementById("searchData").value
+
+  setData(searchData)
+  navigate("/search")
+}
+
 export default () => {
   return (
     <div className={styles.wrapper}>
@@ -22,11 +32,17 @@ export default () => {
             <NavLink to="/about/">About</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
           </span>
-          <input
-            className={styles.navBarElSearch}
-            type="text"
-            placeholder="Search..."
-          />
+          <div className={styles.navBarElSearch}>
+            <input
+              id="searchData"
+              className={styles.navBarElInput}
+              type="text"
+              placeholder="Search..."
+            />
+            <button onClick={handleSearch} className={styles.navBarElButton}>
+              Search
+            </button>
+          </div>
         </nav>
       </div>
     </div>
