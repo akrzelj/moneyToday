@@ -1,170 +1,105 @@
-.contact {
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 100px;
+.form {
+  height: 100%;
+  width: 100%;
+}
+.regoo {
+  display: grid;
+  grid-template-rows: 30px 40px 20px 40px 20px 200px 40px 40px 20px;
+  grid-row-gap: 5px;
 
-  height: 500px;
-  width: 960px;
+  padding: 10px;
+  background-color: #ededed;
 
   border-left: 3px solid #d1d1d1;
   border-right: 3px solid #d1d1d1;
-  display: grid;
-  grid-template-rows: 30px 40px 40px auto 30px;
-  grid-row-gap: 20px;
-  padding: 1%;
-  background-color: #ededed;
 }
 
-.contactTitle {
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.contactName {
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.contactName input {
-  width: 300px;
+.registerInput {
+  width: 100%;
   height: 100%;
+  font-size: 20px;
 }
 
-.contactEmail {
-  grid-row-start: 3;
-  grid-row-end: 4;
+.title {
+  font-size: 30px;
+}
+
+.buttonContainer {
   height: 100%;
+  padding: 1px;
 }
 
-.contactEmail input {
-  width: 300px;
+.button {
   height: 100%;
+  width: 100%;
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.contactMsg {
-  grid-row-start: 4;
-  grid-row-end: 5;
-}
-.msg {
-  width: 99%;
-  height: 90%;
-  resize: none;
+.feedback {
+  color: red;
 }
 
-.contactBtn {
-  grid-row-start: 5;
-  grid-row-end: 6;
-  display: flex;
-  justify-content: flex-end;
+#usernameFeedback {
+  color: red;
 }
 
-@media only screen and (max-width: 1000px) {
-  .contact {
-    margin: auto;
+@media only screen and (min-width: 1000px) {
+  .regoo {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 50px;
-    margin-bottom: 100px;
-
-    height: 400px;
-    width: 550px;
-
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: 30px 50px 20px 50px 20px 200px 20px 50px 20px;
+    grid-row-gap: 10px;
+    background-color: #ededed;
+    width: 1000px;
     border-left: 3px solid #d1d1d1;
     border-right: 3px solid #d1d1d1;
-    display: grid;
-    grid-template-rows: 30px 30px 30px auto 30px;
-    padding: 1%;
-    background-color: #ededed;
   }
 
-  .contactTitle {
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  .contactName {
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  .contactEmail {
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-
-  .contactMsg {
-    grid-row-start: 4;
-    grid-row-end: 5;
-  }
-  .msg {
+  .registerInput {
     width: 99%;
-    height: 90%;
-    resize: none;
+    height: 100%;
+    font-size: 30px;
   }
 
-  .contactBtn {
-    grid-row-start: 5;
-    grid-row-end: 6;
-    display: flex;
-    justify-content: flex-end;
+  .username {
+    width: 100%;
+  }
+
+  .buttonContainer {
+    height: 100%;
+  }
+
+  .button {
+    height: 100%;
+    width: 100%;
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .feedback {
+    color: red;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  form {
-    height: 100%;
-    width: 100%;
-    background-color: #ededed;
-  }
+input:disabled {
+  background-color: gray;
+}
 
-  .contactName input {
-    width: 95%;
-    height: 100%;
-  }
-
-  .contactEmail input {
-    width: 95%;
-    height: 100%;
-  }
-
-  .contact {
-    border: 0px solid black;
-    height: 400px;
-    width: 94%;
-    margin: 0px;
-    padding: 3%;
-    display: grid;
-    grid-template-rows: 30px 30px 30px auto 30px;
-    background-color: #ededed;
-  }
-
-  .contactTitle {
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  .contactName {
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  .contactEmail {
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-
-  .contactMsg {
-    grid-row-start: 4;
-    grid-row-end: 5;
-  }
-  .msg {
-    width: 95%;
-    height: 90%;
-    resize: none;
-  }
-
-  .contactBtn {
-    grid-row-start: 5;
-    grid-row-end: 6;
-    display: flex;
-    justify-content: flex-end;
-  }
+.messageStatus {
+  display: flex;
+  justify-content: center;
 }
