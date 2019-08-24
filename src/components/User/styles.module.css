@@ -8,6 +8,10 @@ a {
   }
 }
 
+a {
+  color: #5d7a8f;
+}
+
 a:visited {
-  color: black;
+  color: #5d7a8f;
 }

@@ -32,3 +32,11 @@
     margin-top: 50px;
   }
 }
+
+a {
+  color: #5d7a8f;
+}
+
+a:visited {
+  color: #5d7a8f;
+}
