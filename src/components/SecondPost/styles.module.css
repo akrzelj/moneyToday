@@ -54,3 +54,7 @@ img {
     overflow: hidden;
   }
 }
+
+a:visited {
+  color: black;
+}

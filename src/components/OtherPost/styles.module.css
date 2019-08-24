@@ -25,3 +25,7 @@ img {
   overflow: hidden;
   height: 80px;
 }
+
+a:visited {
+  color: black;
+}
