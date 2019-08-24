@@ -11,9 +11,9 @@ const setUser = user =>
 export const handleLogin = ({ username, password }) => {
   if (username === `user123` && password === `12345`) {
     return setUser({
-      username: `john`,
-      name: `Johnny`,
-      email: `johnny@example.org`,
+      username: `user123`,
+      name: `Someone`,
+      email: `one@cmp.org`,
     })
   }
 
@@ -21,14 +21,14 @@ export const handleLogin = ({ username, password }) => {
 }
 
 export const loginWithoutCheckingCredentials = ({
+  name,
   username,
   password,
   email,
 }) => {
-  console.log(username, password, email)
   return setUser({
+    name: name,
     username: username,
-    name: password,
     email: email,
   })
 

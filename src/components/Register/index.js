@@ -9,6 +9,7 @@ import style from "./styles.module.css"
 class Register extends React.Component {
   state = {
     username: "",
+    name: "Mister X",
     password: "",
     email: "",
   }
@@ -125,6 +126,18 @@ class Register extends React.Component {
           <div className={style.form}>
             <div className={style.regoo}>
               <div className={style.title}>Register</div>
+
+              <div className={style.name}>
+                <input
+                  className={style.registerInput}
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name here..."
+                  type="text"
+                  onInputCapture={this.handleUpdate}
+                />
+              </div>
+              <div id="nameFeedback" className={style.feedback} />
 
               <div className={style.username}>
                 <input
