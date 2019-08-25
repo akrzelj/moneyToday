@@ -34,8 +34,6 @@
   .post {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
     padding: 0px;
     height: 230px;
   }
@@ -76,8 +74,8 @@
   .post {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    /* grid-row-start: 1;
+    grid-row-end: 2; */
     padding: 0px;
   }
 
@@ -103,8 +101,8 @@
   .img {
     grid-column-start: 1;
     grid-column-end: 2;
-    width: 100%;
-    height: 100%;
+    width: 96%;
+    height: 96%;
     border: 2px solid black;
   }
 

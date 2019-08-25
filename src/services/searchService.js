@@ -2,7 +2,9 @@ export const isBrowser = () => typeof window !== "undefined"
 
 export const getData = () =>
   isBrowser() && window.localStorage.getItem("gatsbySearchData")
-    ? JSON.parse(window.localStorage.getItem("gatsbySearchData")).split(" ")
+    ? JSON.parse(window.localStorage.getItem("gatsbySearchData"))
+        .toLowerCase()
+        .split(" ")
     : []
 
 export const setData = data =>

@@ -1,0 +1,36 @@
+.postContainer {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .postContainer {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    border-left: 3px solid #d1d1d1;
+    border-right: 3px solid #d1d1d1;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 35px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .postContainer {
+    width: 1000px;
+    margin: auto;
+    display: grid;
+    border-left: 3px solid #d1d1d1;
+    border-right: 3px solid #d1d1d1;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+  }
+}
