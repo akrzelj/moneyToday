@@ -51,7 +51,7 @@ class Login extends React.Component {
                 }
               }
             } else {
-              navigate(`/`)
+              navigate(`/app/profile`)
             }
           }}
         >
