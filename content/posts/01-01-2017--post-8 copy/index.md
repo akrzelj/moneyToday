@@ -1,15 +1,15 @@
 ---
 date: "2018-11-01"
-title: "Cash"
-slug: post-one
-indexImage: "./images/cash.jpg"
+title: "Digital fraud"
+slug: post-ten
+indexImage: "./images/fraud.jpg"
 type: "news"
 ---
 
 <!-- markdownlint-disable MD033 -->
 
 <figure class="figure">
-    <img src="./images/cash.jpg"/>
+    <img src="./images/fraud.jpg"/>
      
 </figure>
 
@@ -20,7 +20,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 ## Where does it come from?
 
 <figure class="figure">
-    <img src="./images/cash2.jpg" />
+    <img src="./images/fraud2.jpg" />
      
 </figure>
 
