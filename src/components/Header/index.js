@@ -15,6 +15,12 @@ function handleSearch() {
   navigate("/search")
 }
 
+function handleEnter(event) {
+  if (event.keyCode === 13) {
+    handleSearch()
+  }
+}
+
 export default () => {
   return (
     <div className={styles.wrapper}>
@@ -38,6 +44,7 @@ export default () => {
               className={styles.navBarElInput}
               type="text"
               placeholder="Search..."
+              onKeyDown={handleEnter}
             />
             <button onClick={handleSearch} className={styles.navBarElButton}>
               Search
