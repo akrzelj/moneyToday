@@ -2,6 +2,7 @@ import React from "react"
 import { Link, navigate } from "gatsby"
 import style from "./styles.module.css"
 import { handleLogin, isLoggedIn } from "../../services/auth"
+import { getLastPage } from "../../services/helper"
 
 class Login extends React.Component {
   state = {
@@ -23,7 +24,7 @@ class Login extends React.Component {
 
   render() {
     if (isLoggedIn()) {
-      navigate(`/app/profile`)
+      navigate(getLastPage())
     }
 
     return (
@@ -51,7 +52,7 @@ class Login extends React.Component {
                 }
               }
             } else {
-              navigate(`/app/profile`)
+              navigate(getLastPage())
             }
           }}
         >

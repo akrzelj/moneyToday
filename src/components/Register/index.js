@@ -5,6 +5,7 @@ import {
   isLoggedIn,
 } from "../../services/auth"
 import style from "./styles.module.css"
+import { getLastPage } from "../../services/helper"
 
 class Register extends React.Component {
   state = {
@@ -111,7 +112,7 @@ class Register extends React.Component {
 
   render() {
     if (isLoggedIn()) {
-      navigate(`/app/profile`)
+      navigate(getLastPage())
     }
 
     return (
@@ -120,7 +121,7 @@ class Register extends React.Component {
           method="post"
           onSubmit={event => {
             this.handleSubmit(event)
-            navigate(`/`)
+            navigate(getLastPage())
           }}
         >
           <div className={style.form}>

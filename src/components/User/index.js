@@ -4,6 +4,11 @@ import { Link, navigate } from "gatsby"
 import { getUser, isLoggedIn, logout } from "../../services/auth"
 
 import styles from "./styles.module.css"
+import { setLastPage } from "../../services/helper"
+
+function clickMethod() {
+  setLastPage(window.location.pathname)
+}
 
 export default () => {
   const content = { message: "", login: true }
@@ -16,7 +21,7 @@ export default () => {
           href="/"
           onClick={event => {
             event.preventDefault()
-            logout(() => navigate(`/app/login`))
+            logout(() => navigate(`/`))
           }}
         >
           (Logout)
@@ -28,9 +33,15 @@ export default () => {
     content.display = (
       <>
         {content.message}
-        <Link to="/app/login">Login</Link>
+        <Link onClick={clickMethod} to="/app/login">
+          Login
+        </Link>
         <span className={styles.hideOnMobile}>{" / "}</span>
-        <Link className={styles.hideOnMobile} to="/app/register">
+        <Link
+          onClick={clickMethod}
+          className={styles.hideOnMobile}
+          to="/app/register"
+        >
           Register
         </Link>
       </>
