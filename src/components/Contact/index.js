@@ -47,7 +47,19 @@ class Contact extends React.Component {
     return false
   }
 
-  handleSubmit(event) {}
+  handleSubmit(event) {
+    event.preventDefault()
+    document.getElementById("submitButton").disabled = true
+    document.getElementById("msgStatus").innerHTML = "Message successfully sent"
+    setTimeout(function() {
+      document.getElementById("name").value = ""
+      document.getElementById("email").value = ""
+      document.getElementById("message").value = ""
+      document.getElementById("submitButton").value = "Send"
+      document.getElementById("submitButton").disabled = false
+      document.getElementById("msgStatus").innerHTML = ""
+    }, 5000)
+  }
 
   render() {
     return (
@@ -107,7 +119,7 @@ class Contact extends React.Component {
                   disabled
                 />
               </div>
-              <div className={style.messageStatus} />
+              <div id="msgStatus" className={style.messageStatus} />
             </div>
           </div>
         </form>

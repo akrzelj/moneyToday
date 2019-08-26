@@ -102,4 +102,5 @@ input:disabled {
 .messageStatus {
   display: flex;
   justify-content: center;
+  color: green;
 }
