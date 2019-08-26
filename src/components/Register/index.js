@@ -144,7 +144,7 @@ class Register extends React.Component {
                   className={style.registerInput}
                   id="username"
                   name="username"
-                  placeholder="Enter your username here..."
+                  placeholder="Enter new username here..."
                   type="text"
                   onInputCapture={this.handleUpdate}
                 />
@@ -156,7 +156,7 @@ class Register extends React.Component {
                   className={style.registerInput}
                   id="password"
                   name="password"
-                  placeholder="Enter your password here..."
+                  placeholder="Enter new password here..."
                   type="text"
                   onInputCapture={this.handleUpdate}
                 />
