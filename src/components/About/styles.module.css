@@ -20,6 +20,8 @@
 
   border-left: 3px solid #d1d1d1;
   border-right: 3px solid #d1d1d1;
+
+  background-color: #ededed;
 }
 
 #aboutMain {
@@ -28,7 +30,7 @@
   justify-content: center;
   align-items: center;
   grid-column: 1 / 2;
-  border-right: 3px solid #ededed;
+  border-right: 3px solid #d1d1d1;
 }
 
 #aboutMainTitle {
@@ -130,6 +132,8 @@
 
     border-left: 0px;
     border-right: 0px;
+
+    background-color: #ededed;
   }
 
   #aboutMain {
