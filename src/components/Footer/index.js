@@ -4,8 +4,8 @@ import styles from "./styles.module.css"
 
 export default () => (
   <footer>
-    <Link to="/" className={styles.text}>
-      Money Today
+    <Link to="/">
+      <span className={styles.text}>Money Today</span>
     </Link>
   </footer>
 )
