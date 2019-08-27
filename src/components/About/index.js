@@ -8,7 +8,7 @@ export default () => (
       <img
         className={style.imgBig}
         alt="Success"
-        src="https://www.industryweek.com/sites/industryweek.com/files/styles/article_featured_retina/public/uploads/2017/05/teamwork.jpg?itok=U5ZihnwP"
+        src="https://d24fkeqntp1r7r.cloudfront.net/wp-content/uploads/2019/04/15230034/grant-ritchie-530779-unsplash.jpg"
       />
       <div>
         Agile development seed moly adopters social media MVP stealth
