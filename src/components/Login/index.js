@@ -32,21 +32,21 @@ class Login extends React.Component {
         <form
           method="post"
           onSubmit={event => {
-            if (this.handleSubmit(event) == false) {
+            if (this.handleSubmit(event) === false) {
               if (
-                this.state.username.length != 0 &&
-                this.state.password.length != 0
+                this.state.username.length !== 0 &&
+                this.state.password.length !== 0
               ) {
                 document.getElementById("passwordFeedback").innerHTML =
                   "Entered credentials are not valid!!!"
                 document.getElementById("usernameFeedback").innerHTML = ""
               } else {
-                if (this.state.username.length == 0) {
+                if (this.state.username.length === 0) {
                   document.getElementById("usernameFeedback").innerHTML =
                     "Please enter username"
                 }
 
-                if (this.state.password.length == 0) {
+                if (this.state.password.length === 0) {
                   document.getElementById("passwordFeedback").innerHTML =
                     "Please enter password"
                 }

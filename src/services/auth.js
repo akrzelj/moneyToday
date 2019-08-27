@@ -31,8 +31,6 @@ export const loginWithoutCheckingCredentials = ({
     username: username,
     email: email,
   })
-
-  return false
 }
 
 export const isLoggedIn = () => {

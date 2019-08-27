@@ -7,13 +7,8 @@ export const getData = () =>
 
 export const setLastPage = data => {
   window.localStorage.setItem("gatsbyZadnjaStranica", data)
-  console.log("################# set")
-  console.log(getData())
 }
 
 export const getLastPage = () => {
-  console.log("################# get")
-  console.log(getData())
-
   return getData().substr(1, getData().length - 1)
 }

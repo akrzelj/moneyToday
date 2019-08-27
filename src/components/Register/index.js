@@ -20,7 +20,7 @@ class Register extends React.Component {
   }
 
   isContentValidEmail(content) {
-    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     return re.test(content)
   }
 
@@ -49,12 +49,10 @@ class Register extends React.Component {
     if (currUsername.length <= 5) {
       document.getElementById("usernameFeedback").innerHTML +=
         "Username has to be longer than 5 signs. "
-      console.log("Username has to be longer than 5 signs. ")
     }
     if (!this.isContentAlphanumeric(currUsername)) {
       document.getElementById("usernameFeedback").innerHTML +=
         "Username can only contain alphanumeric signs. "
-      console.log("Username can only contain alphanumeric signs.")
     }
     if (currUsername.length > 5 && this.isContentAlphanumeric(currUsername)) {
       document.getElementById("usernameFeedback").innerHTML = ""
@@ -73,12 +71,10 @@ class Register extends React.Component {
     if (currPassword.length <= 5) {
       document.getElementById("passwordFeedback").innerHTML +=
         "Password has to be longer than 5 signs. "
-      console.log("Password has to be longer than 5 signs. ")
     }
     if (!this.isContentAlphanumeric(currPassword)) {
       document.getElementById("passwordFeedback").innerHTML +=
         "Password can only contain alphanumeric signs. "
-      console.log("Password can only contain alphanumeric signs.")
     }
     if (currPassword.length > 5 && this.isContentAlphanumeric(currPassword)) {
       document.getElementById("passwordFeedback").innerHTML = ""

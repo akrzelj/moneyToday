@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { isLoggedIn } from "../services/auth"
 
 import Layout from "../components/Layout"
